@@ -37,7 +37,8 @@
 		}
 
 		// TODO: Define a new updateDisplay function. 
-		function updateDisplay() {
+		function updateDisplay() {	
+								
 			tipPercent = tipPercentInput.value
 			billAmount = billAmountInput.value
 			tip = calcTip(billAmount, tipPercent)
@@ -45,7 +46,7 @@
 		}
 
 		billAmountInput.addEventListener('input', updateDisplay())
-		billAmountInput.addEventListener('input', updateDisplay())
+		tipPercentInput.addEventListener('input', updateDisplay())
     
 		// This function will call caclulate tip function 
 		// and display the results. 
