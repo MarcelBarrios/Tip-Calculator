@@ -37,7 +37,8 @@
 		}
 
 		// TODO: Define a new updateDisplay function. 
-		function updateDisplay() {	
+		function updateDisplay(e) {	
+			console.log(e.target.value);
 								
 			tipPercent = tipPercentInput.value
 			billAmount = billAmountInput.value
@@ -45,8 +46,12 @@
 			display.innerHTML = `Bill: $${billAmount} Tip %: ${tipPercent}% Tip: $${tip.toFixed(2)}`
 		}
 
-		billAmountInput.addEventListener('input', updateDisplay())
-		tipPercentInput.addEventListener('input', updateDisplay())
+		billAmountInput.addEventListener('input', updateDisplay)
+		tipPercentInput.addEventListener('input', updateDisplay)
+
+		billAmountInput.addEventListener('input', (e) => console.log("Bill amount changed", e));
+		tipPercentInput.addEventListener('input', (e) => console.log("Tip percent changed", e));
+
     
 		// This function will call caclulate tip function 
 		// and display the results. 
